@@ -50,7 +50,14 @@ export const Header = () => {
             className="mr-2 hover:text-orange-500"/>Search</Link>
             </li>
           
-          <li className=" hover:text-orange-500">About</li> 
+          {/* <li className=" hover:text-orange-500">About</li>  */}
+          <li 
+          className="hover:text-orange-500 cursor-pointer"
+          onClick={() => window.open('https://personal-portfolio-dev-rohits-projects.vercel.app/', '_blank')}
+          >
+            About
+          </li>
+
 
           {/* <Link to="/contact">
           <li className="flex items-center gap-1 hover:text-orange-500">
