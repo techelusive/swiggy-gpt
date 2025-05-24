@@ -1,5 +1,5 @@
 // import List from "./List";
-import Map from "./Map";
+//import Map from "./Map";
 
 const OlaBody = () => {
     return (
@@ -8,9 +8,9 @@ const OlaBody = () => {
                     <List />
                 </div> */}
                 {/* <div className=""> */}
-                <div className=" absolute left-1/2">
+                {/* <div className=" absolute left-1/2">
                     <Map />
-                </div>
+                </div> */}
             {/* </div> */}
         </div>
         

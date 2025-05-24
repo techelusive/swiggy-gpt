@@ -1,18 +1,18 @@
-import { OlaMaps } from 'olamaps-web-sdk';
-import { OLA_API_KEY } from '../olaUtils/apiKey';
+// import { OlaMaps } from 'olamaps-web-sdk';
+// import { OLA_API_KEY } from '../olaUtils/apiKey';
 
-const Map = () => {
+// const Map = () => {
 
-    const OlaMaps = new OlaMaps({
-        apiKey: [OLA_API_KEY],
-    })
+//     const OlaMaps = new OlaMaps({
+//         apiKey: [OLA_API_KEY],
+//     })
 
-    return (
-        <div>
-            <div className="bg-sky-300 h-[400px] w-[600px]">
-            </div>
-        </div>
-    );
-};
+//     return (
+//         <div>
+//             <div className="bg-sky-300 h-[400px] w-[600px]">
+//             </div>
+//         </div>
+//     );
+// };
 
-export default Map;
+// export default Map;
