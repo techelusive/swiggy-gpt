@@ -19,7 +19,7 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/", element: <Home />},
       ...SwiggyRoutes,
       ...OlaRoutes,
     ],

@@ -1,9 +1,6 @@
-//port { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    
-    // const [home, setHome] = useState("");
 
     return (
         <div className="bg-orange-300 h-screen">
