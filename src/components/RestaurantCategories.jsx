@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 
 const RestaurantCategories = ({ data }) => {
-    const [showItems, setShowItems] = useState(true);
+    const [showItems, setShowItems] = useState(false);
 
     const openClick = () => {
         setShowItems(!showItems);
