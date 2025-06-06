@@ -3,15 +3,24 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RxCaretDown } from "react-icons/rx";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import Logout from "./Logout";
+import { toggleForm } from "../utils/appSlice";
+import { FaUserLarge } from "react-icons/fa6";
+//import { useAuth0 } from "@auth0/auth0-react";
+//import Logout from "./Logout";
+
 
 export const Header = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.items);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { loginWithRedirect, user } = useAuth0();
+  //const { loginWithRedirect, user } = useAuth0();
+
+  const toggleFormHandler = () => {
+    dispatch(toggleForm());
+  };
+
 
 
   return (
@@ -94,7 +103,14 @@ export const Header = () => {
 
             {/* sign-in toggle */}
             <li className="cartoon-text cursor-pointer group relative">
-              {user ? (
+               <span className="flex items-center gap-2">
+              <FaUserLarge
+                onClick={toggleFormHandler}
+                className="ml-1 cursor-pointer"
+              />
+              <button onClick={toggleFormHandler} className="cursor-pointer">SignIn</button>
+            </span>
+              {/* {user ? (
                 <div>
                   <p className="group-hover:text-orange-500">{user.name}</p>
                   <div className="absolute top-full mt-1 hidden group-hover:block"><Logout />
@@ -102,13 +118,14 @@ export const Header = () => {
                 </div>
               ) : (
                 <button onClick={() => loginWithRedirect()} className="cursor-pointer">Log In</button>
-              )}
+              )} */}
             </li>
 
             <li className="cartoon-text">
               <Link to="/cart">
                 <span className="inline-flex justify-center items-center w-[22px] h-[22px] bg-green-600 text-white text-xs rounded-sm mr-2">
                   {cartItems?.reduce((sum, item) => sum + item.quantity, 0)}
+                  {/* {cartItems} */}
                 </span>
                 Cart
               </Link>

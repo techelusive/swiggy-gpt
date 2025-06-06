@@ -65,7 +65,7 @@ const LoginToggle = () => {
   if (!isFormOpen) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-end z-[1000]">
+    <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-50 backdrop-blur-sm flex justify-end z-[1000]">
       {/* sidebar content */}
       <div className="w-[400px] bg-white h-full shadow-lg p-6 relative z-[1001]">
         <form onSubmit={(e) => e.preventDefault()}>
