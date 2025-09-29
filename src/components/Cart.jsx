@@ -226,7 +226,7 @@ const Cart = () => {
               <img
                 src={emptyCartUrl}
                 alt="Empty Cart"
-                className="w-2/4 h-auto mx-auto"
+                className="w-[390px] mx-auto"
               />
               <h1 className="font-bold">Your Cart Is Empty</h1>
               <button
@@ -238,6 +238,7 @@ const Cart = () => {
             </div>
           )}
           
+          {/* display cart items */}
           <div className="space-y-4">
             {cartItems.map((item, index) => (
               <div
