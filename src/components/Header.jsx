@@ -10,7 +10,6 @@ import { FaUserLarge } from "react-icons/fa6";
 //import { useAuth0 } from "@auth0/auth0-react";
 //import Logout from "./Logout";
 
-
 export const Header = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.items);
@@ -20,8 +19,6 @@ export const Header = () => {
   const toggleFormHandler = () => {
     dispatch(toggleForm());
   };
-
-
 
   return (
     <>
@@ -67,7 +64,7 @@ export const Header = () => {
               <RxCaretDown className="inline text-xl text-black" />
             </div>
 
-            {/* Hamburger Menu (small screens) */}
+            {/* Hamburger Menu */}
             <button
               className="md:hidden text-2xl ml-auto"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -103,13 +100,15 @@ export const Header = () => {
 
             {/* sign-in toggle */}
             <li className="cartoon-text cursor-pointer group relative">
-               <span className="flex items-center gap-2">
-              <FaUserLarge
-                onClick={toggleFormHandler}
-                className="ml-1 cursor-pointer"
-              />
-              <button onClick={toggleFormHandler} className="cursor-pointer">SignIn</button>
-            </span>
+              <span className="flex items-center gap-2">
+                <FaUserLarge
+                  onClick={toggleFormHandler}
+                  className="ml-1 cursor-pointer"
+                />
+                <button onClick={toggleFormHandler} className="cursor-pointer">
+                  SignIn
+                </button>
+              </span>
               {/* {user ? (
                 <div>
                   <p className="group-hover:text-orange-500">{user.name}</p>
